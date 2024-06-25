@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<? // osnovi sintaksisa // ?>
 <html>
 <head>
 <title>METANIT.COM</title>
