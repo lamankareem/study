@@ -223,5 +223,31 @@ foreach($words as $english => $russian)
     echo "$english : $russian<br />";
 }
 ?>
-
+<?php
+$families = [["Tom", "Alice"], ["Bob", "Kate"]]; // tut 0 eto perviy spisok
+print_r($families[0]);  // Array ( [0] => Tom [1] => Alice )
+?>
+<?php
+$families = [["Tom", "Alice"], ["Bob", "Kate"]]; // v nacale spisok potom slovo
+echo $families[0][0] . "<br />";  //Tom
+echo $families[0][1] . "<br />";  //Alice
+echo $families[1][0] . "<br />";  //Bob
+echo $families[1][1];   //Kate
+?>
+<?php
+$phones = array(
+        "apple"=> array("iPhone 12", "iPhone X", "iPhone 12 Pro") , 
+        "samsumg"=>array("Samsung Galaxy S20", "Samsung Galaxy S20 Ultra"),
+        "nokia" => array("Nokia 8.3", "Nokia 3.4"));
+foreach ($phones as $brand => $items)
+{
+    echo "<h3>$brand</h3>";
+    echo "<ul>";
+    foreach ($items as $key => $value)
+    {
+        echo "<li>$value</li>";
+    }
+    echo "</ul>";
+}
+?>
 
