@@ -250,4 +250,66 @@ foreach ($phones as $brand => $items)
     echo "</ul>";
 }
 ?>
-
+<?php // vlojennie massivi takje predstavlayut assot. massivi
+$gadgets = array(
+        "phones" => array("apple" => "iPhone 12", 
+                    "samsumg" => "Samsung S20",
+                    "nokia" => "Nokia 8.3"),
+        "tablets" => array("lenovo" => "Lenovo Yoga Smart Tab", 
+                        "samsung" => "Samsung Galaxy Tab S5",
+                        "apple" => "Apple iPad Pro"));
+foreach ($gadgets as $gadget => $items)
+{
+    echo "<h3>$gadget</h3>";
+    echo "<ul>";
+    foreach ($items as $key => $value)
+    {
+        echo "<li>$key : $value</li>";
+    }
+    echo "</ul>";
+}
+?>
+<?php // prostaya funksiya i yeye vizov
+function hello()
+{
+    echo "Hello PHP";
+}
+ 
+hello();    // вызов функции
+?>
+<?php
+function displayInfo($name, $age) // mnogo parametrov
+{
+    echo "<div>Имя: $name <br />Возраст: $age</div><hr>";
+}
+ 
+displayInfo("Tom", 36);
+displayInfo("Bob", 39);
+displayInfo("Sam", 28);
+?>
+<?php
+function sum(...$numbers)
+{
+    $result = 0;
+    foreach($numbers as $number) {
+        $result += $number;
+    }
+    echo "<p>Сумма: $result</p>";
+}
+sum(1, 2, 3);
+sum(2, 3);
+sum(4, 5, 8, 10);
+?>
+<?php
+function getAverageScore($name, ...$scores)
+{
+    $result = 0.0;
+    foreach($scores as $score) {
+        $result += $score;
+    }
+    $result = $result / count($scores);
+    echo "<p>$name: $result</p>";
+}
+getAverageScore("Tom", 5, 5, 4, 5);
+getAverageScore("Bob", 4, 3, 4, 4, 4);
+?>
