@@ -1,5 +1,4 @@
 <?php
-<? // operacii php// ?>
 $a = 8 + 2; // 10, сложение
 $a = 8 - 2; // 6, вычитание
 $a = 8 * 2; // 16, умножение
@@ -24,14 +23,6 @@ echo $a . " " . $b . "!";   // Привет мир!
 
 
 // operacii sravneniya //
-$a == 5 // ravenstvo
-$a === 5 // tojdestvenstvo
-$a != 5 // ne ravnost
-$a !== 5 // ne ravnost
-$a > 5 // bolshe
-$a < 5 // menshe
-$a >= 5 
-$a <= 5
 // logiceskiye operacii //
 $a = (true && false);   // false
 // аналогично
@@ -58,17 +49,3 @@ $b = 5; //101
 echo $a | $b; // равно 5 - 101
 
 // prisvaivanie
-=
-+=
--=
-*=
-/=
-.=
-%=
-**=
-&=
-|=
-^=
-<<=
->>=
-
