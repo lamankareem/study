@@ -8,10 +8,11 @@ class Device {
         $this->model = $model;
     }
     public function turnOn() {
-        echo "$this->model is turned on"
+        echo "<br>The device is turned on.<br>";
     }
+
     public function turnOff() {
-        echo "$this->model is turned off"
+        echo "<br>The device is turned off.<br>";
     }
 }
 class Phone extends Device {
@@ -19,10 +20,6 @@ class Phone extends Device {
     public function __construct($brand, $model) {
         parent::__construct($brand, $model);
 
-    }
-    public function turnOn() {
-        parent::turnOn();
-        echo "$model is turned on"
     }
 
 
@@ -58,9 +55,12 @@ class Tablet extends Device {
 $phone = new Phone("Apple", "Iphone 13");
 $phone->displayInfo();
 $phone->turnOn();
+
 $laptop = new Laptop("Apple", "MacBook Pro");
 $laptop->displayInfo();
+$laptop->turnOff();
 
 $tablet = new Tablet("Apple", "Ipad Pro");
 $tablet->displayInfo();
+$tablet->turnOn();
 ?>
